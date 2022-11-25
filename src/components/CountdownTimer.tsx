@@ -66,10 +66,11 @@ const CountdownTimer = () => {
 		const seconds = differenceDate.getSeconds()
 		const minutes = differenceDate.getMinutes()
 		const hours = differenceDate.getHours()
-		const days = Math.round(difference / (1000 * 3600 * 24))
+		const days = Math.round(difference / (1000 * 3600 * 24)) - 1
+		const daysAbs = days < 0 ? 0 : days
 
 		return {
-			days,
+			days: daysAbs,
 			hours,
 			minutes,
 			seconds
