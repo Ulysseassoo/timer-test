@@ -5,3 +5,10 @@ export interface EventsTime {
     day: string;
     index: number
 }
+
+export interface Countdown {
+    seconds: number;
+    minutes: number;
+    hours: number;
+    days: number;
+}
